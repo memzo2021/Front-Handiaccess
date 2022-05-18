@@ -1,0 +1,32 @@
+<!-- <p *ngFor="let country of listCountries"> 
+    {{ country.name }} 
+</p> -->
+<h1>Liste de mes stations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lift</th>
+            <th>Escalator</th>
+            <th>Call terminal</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let station of listStations">
+            <td>{{ station.name }}</td>
+            <td>{{ station.lift }}</td>
+            <td>{{ station.escalator }}</td>
+            <td>{{ station.callTerminal}}</td>
+            <td>
+                <button class="btn btn-warning" routerLink="/admin-update/{{station._id}}">Modifier</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" routerLink="/admin-update/{{station._id}}">Supprimer</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

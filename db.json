@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "email": "Coco-chanel@email.com",
+      "password": "$2a$10$Y9LhGoCPXQNMASrgA0RiS.4i4YNVE302L8xneYZCPwaqDmhzcR92G",
+      "id": 1
+    },
+
+    {
+      "email": "idh@ide.com",
+      "password": "$2a$10$YngsTcHreVaXgcJis1tXRenuDsmJIWI4TNq3jDoOf45MczDS8OSQa",
+      "id": 3
+    },
+    {
+      "email": "momo@ide.com",
+      "password": "$2a$10$DT6DNGNG0V0h0iimUowlYuhvQA3MTubcP1u1cZ3kVlyBglu7wl41m",
+      "id": 4
+    },
+    {
+      "email": "youpi@mail.com",
+      "password": "$2a$10$/850POsZINJ8rUwqOsacSu4gZDnDixWJ08Azxif/uJB.hPNMn9Fsy",
+      "id": 5
+    },
+    {
+      "email": "papo@yahoo.com",
+      "password": "$2a$10$1As4yyguCubkSAdKF/KV7.RGNcfggmAp9IuxGN6njhd.BNXDiYw5y",
+      "id": 6
+    },
+    {
+      "email": "lundi@yahoo.com",
+      "password": "$2a$10$Qh/HXjAiFeoYILrHwjOozeHkZy8eqbwZkwnWbst71QcR/OGtijAua",
+      "id": 7
+    }
+  ]
+}

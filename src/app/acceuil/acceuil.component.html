@@ -1,0 +1,9 @@
+<h1> Handi-Access bienvenue</h1>
+<form (ngSubmit)="ajoutStation(todoForm)" #todoForm="ngForm">
+    <fieldset>
+        <legend>Itinéraire:</legend>
+    <input type="text" name="aller" placeholder="Station de départ" ngModel required>
+    <input type="text" name="retour" placeholder="Sation d'arrivée" ngModel required>
+    <button type="button" class="btn btn-secondary">C'est parti</button>
+</fieldset>
+</form>

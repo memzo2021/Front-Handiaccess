@@ -1,0 +1,27 @@
+   form{ 
+     position: relative; 
+     padding: 60px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    
+ }
+  input{
+     border-style: dashed;
+     padding: 15px;
+     border-radius: 100px;
+    outline-color: blue;
+          
+
+
+ }
+ .lab{
+ margin-left: 80px;
+ }
+
+ i{
+     position: relative;
+     right: 25px;
+ }

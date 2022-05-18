@@ -1,0 +1,34 @@
+body{
+    background-color: chartreuse;}
+ form{ 
+     position: relative; 
+     padding: 30px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+ }
+/* input{
+     margin-top: 20px;
+     padding: 15px;
+     border-style: dashed;
+     outline-color: blue;
+     border-radius: 100px;
+ }*/
+ i{
+     position: relative;
+     right: 25px;
+ }
+ h1{
+     text-align: center;
+ }
+
+ input{
+     border-style: dashed;
+     padding: 15px;
+     border-radius: 100px;
+          outline-color: blue;
+
+
+ }

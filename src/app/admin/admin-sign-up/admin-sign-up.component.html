@@ -1,0 +1,49 @@
+<h1 class="mb-3">S'inscrire</h1>
+<form class="mt-5 col-md-6 m-auto" [formGroup]="signUpForm" (ngSubmit)="onSubmitForm()">
+  <div class="mb-3">
+    <label for="username" class="form-label">E-mail</label>
+    <div class="input-group">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input formControlName="userName" type="text" class="form-control" id="username"
+        aria-describedby="usernameHelp" />
+    </div>
+    <!--  <div>
+        Champs touched : {{signUpForm.controls['userName'].touched}}
+      </div>
+      <div>
+        Champs modifié : {{signUpForm.controls['userName'].dirty}}
+      </div>
+     <div>
+        Champs invalide : {{signUpForm.controls['userName'].invalid}}
+      </div> -->
+      
+    <div id="userHelp" class="form-text alert-danger"
+      *ngIf="signUpForm.controls['userName'].touched && signUpForm.controls['userName'].invalid ">
+      L'adresse email est obligatoire ... 😢
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="userPassword" class="form-label">Mot de passe</label>
+    <input formControlName="password" type="password" class="form-control" id="userPassword"
+      aria-describedby="passwordHelp" />
+    <div id="passwordHelp" class="form-text">
+      De 8 à 12 caractères, au moins 1 lettre majuscule, 1 lettre minuscule, 1 chiffre et 1 caractère spécial.
+    </div>
+  </div>
+  
+  <div *ngIf="signUpForm.controls['password'].touched && signUpForm.controls['password'].getError('required')"
+    class="form-text alert-danger">
+    Le mot de passe est obligatoire
+  </div>
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Confirmez le mot de passe</label>
+    <input formControlName="confirmPassword" type="password" class="form-control" id="confirmPassword" />
+  </div>
+  <div class="d-grid d-md-flex justify-content-md-end">
+    <button [disabled]="signUpForm.invalid" type="submit" class="btn btn-primary btn-lg">
+      S'inscrire
+    </button>
+
+  </div>
+  <!-- <div>Le formulaire est-il invalide ? : {{ signUpForm.invalid }}</div> -->
+</form>

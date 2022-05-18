@@ -1,0 +1,45 @@
+<header>
+  <nav class="sticky-top navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-xl">
+      <img src="assets/images/logo1_.png" alt="Logo" />
+      <button class="navbar-toggler m-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse static-top" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="accueil" routerLinkActive="active">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/app-admin-filter" routerLinkActive="active">Filtrer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/app-create" routerLinkActive="active">New Station</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin-crud" routerLinkActive="active">List of Stations</a>
+          </li>
+
+        </ul>
+           
+      <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === false">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin" routerLinkActive="active">S'inscrire </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/app-sign-in" routerLinkActive="active">Se connecter</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === true">
+        <li class="nav-item">
+          <a class="nav-link" (click)="onClickLogout()">Log out</a>
+
+        </li>
+      </ul> 
+       </div>
+    </div>
+  </nav>
+</header>

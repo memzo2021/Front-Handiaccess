@@ -1,0 +1,41 @@
+<h1 class="mb-3">Creation Stations</h1>
+<form class="mt-5 col-md-6 m-auto" [formGroup]="createForm" (ngSubmit)="onSubmitForm()">
+    <div class="mb-3">
+        <label for="name-station" class="form-label">Station name</label>
+        <div class="input-group">
+
+            <input formControlName="stationName" type="text" class="form-control" id="stationName"
+                aria-describedby="stanameHelp" />
+        </div>
+
+    </div>
+
+    <div class="mb-3 form-check">
+        <label for="stationLift" class="form-check-label">Lift</label>
+        <input formControlName="lift" type="checkbox" class="form-check-input" id="stationLift"
+            aria-describedby="liftHelp" />
+         
+    </div>
+
+<div class="mb-3 form-check">
+    <label for="stationLift" class="form-check-label">Escalator</label>
+    <input formControlName="lift" type="checkbox" class="form-check-input" id="stationLift"
+        aria-describedby="liftHelp" />
+
+</div>
+
+     
+    <div class="mb-3 form-check">
+        <label for="callTerminal" class="form-check-label">Call terminal</label>
+        <input formControlName="callTerminal" type="checkbox" class="form-check-input" id="callTerminal"
+            aria-describedby="callTerminalHelp" />
+        
+        <div class="d-grid d-md-flex justify-content-md-end">
+            <button [disabled]="createForm.invalid" type="submit" class="btn btn-primary btn-lg">
+                Create
+            </button>
+
+        </div>
+    </div>
+
+</form>
