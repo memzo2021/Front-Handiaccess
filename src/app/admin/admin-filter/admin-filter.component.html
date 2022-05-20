@@ -1,31 +1,33 @@
- <div class="container">
-     <div class="row">
-         <div class="Search-hero">
-             <input type="text" name="search" [(ngModel)]="searchText" placeholder="Searchby name">
-         </div>
-         <table class="table table-striped">
-             <thead>
-             <tr>
-                 <th>Id</th>
-                 <th>Station name</th>
-                 <th>Lift</th>
-                 <th>Escalator</th>
-                 <th>Call terminal</th>
-             </tr>
+<div class="container">
+    <div class="row">
+        <div class="Search-hero">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="Searchby name">
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Station name</th>
+                    <th>Lift</th>
+                    <th>Escalator</th>
+                    <th>Call terminal</th>
+                    <th>TTTEEESSSTTT</th>
+                </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let station of stations | filter:searchText"> 
-                <td>{{station.id}}</td>
-                <td>{{station.name}}</td>
-                <td>{{station.Lift}}</td>
-                <td>{{station.Escalator}}</td>
-                <td>{{station.callterminal}}</td>
+                <tr *ngFor="let station of stations | filter:searchText">
+                    <td>{{station.id}}</td>
+                    <td>{{station.name}}</td>
+                    <td>{{station.lift}}</td>
+                    <td>{{station.escalator}}</td>
+                    <td>{{station.callterminal}}</td>
+                    <td> <img src="{{station.id}}.png" alt="ligne image"></td>
 
 
 
 
                 </tr>
             </tbody>
-         </table>
-     </div>
- </div>
+        </table>
+    </div>
+</div>

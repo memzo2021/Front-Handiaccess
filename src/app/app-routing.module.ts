@@ -9,19 +9,19 @@ import { AdminStationsComponent } from './admin/admin-stations/admin-stations.co
 import { AdminCreateComponent } from './admin/admin-create/admin-create.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminCrudComponent } from './admin/admin-crud/admin-crud.component';
+import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
 
 
 const routes: Routes = [
   { path: 'accueil', component: AcceuilComponent },
   { path: 'admin', component: AdminSignUpComponent },
+  { path: 'admin-update/:id-station', canActivate: [AuthGuard], component:AdminUpdateComponent},
 
-  { path: 'app-create', component: AdminCreateComponent },
+  { path: 'app-create', canActivate: [AuthGuard], component: AdminCreateComponent },
   { path: 'app-admin-filter', component: AdminFilterComponent },
-  { path: 'app-my-stations',canActivate:[AuthGuard], component: AdminStationsComponent },
-  { path: 'app-my-stations', component: AdminStationsComponent },
-
+   { path: 'app-my-stations', component: AdminStationsComponent },
   { path: 'app-sign-in', component: AdminSignInComponent },
-  {path:'admin-crud',component:AdminCrudComponent},
+  { path: 'admin-crud', canActivate: [AuthGuard], component:AdminCrudComponent},
   { path: '**', component: NotFoundComponent }
 
 ];

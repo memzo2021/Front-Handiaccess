@@ -1,11 +1,11 @@
 <h1 class="mb-3">Creation Stations</h1>
-<form class="mt-5 col-md-6 m-auto" [formGroup]="createForm" (ngSubmit)="onSubmitForm()">
+<form class="mt-5 col-md-6 m-auto" [formGroup]="newStationForm" (ngSubmit)="onSubmitForm()">
     <div class="mb-3">
         <label for="name-station" class="form-label">Station name</label>
         <div class="input-group">
 
-            <input formControlName="stationName" type="text" class="form-control" id="stationName"
-                aria-describedby="stanameHelp" />
+            <input formControlName="name" type="text" class="form-control" id="name"
+                aria-describedby="nameHelp" />
         </div>
 
     </div>
@@ -31,7 +31,7 @@
             aria-describedby="callTerminalHelp" />
         
         <div class="d-grid d-md-flex justify-content-md-end">
-            <button [disabled]="createForm.invalid" type="submit" class="btn btn-primary btn-lg">
+            <button [disabled]="newStationForm.invalid" type="submit" class="btn btn-primary btn-lg">
                 Create
             </button>
 

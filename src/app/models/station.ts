@@ -1,5 +1,5 @@
 export class Station {
-    _id?: string;
+    id?: string;
     name: string;
     lift: boolean;
     escalator: boolean;

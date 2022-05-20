@@ -22,10 +22,12 @@
             <td>{{ station.escalator }}</td>
             <td>{{ station.callTerminal}}</td>
             <td>
-                <button class="btn btn-warning" routerLink="/admin-update/{{station._id}}">Modifier</button>
+                <button class="btn btn-warning" routerLink="/admin-update/{{station.id}}">Modifier</button>
             </td>
             <td>
-                <button class="btn btn-danger" routerLink="/admin-update/{{station._id}}">Supprimer</button>
+                <button class="btn btn-danger"
+                (click)="onClickDeleteStation(station.id)">Supprimer
+                    </button>
             </td>
         </tr>
     </tbody>
