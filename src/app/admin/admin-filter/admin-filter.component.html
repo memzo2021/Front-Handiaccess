@@ -1,17 +1,17 @@
 <div class="container">
     <div class="row">
         <div class="Search-hero">
-            <input type="text" name="search" [(ngModel)]="searchText" placeholder="Searchby name">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="Cherchez par nom">
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Station name</th>
-                    <th>Lift</th>
+                    <th>Nom de la station</th>
+                    <th>Ascenseur</th>
                     <th>Escalator</th>
-                    <th>Call terminal</th>
-                    <th>TTTEEESSSTTT</th>
+                    <th>Borne d'appel</th>
+                    <th>Ligne</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,7 +21,9 @@
                     <td>{{station.lift}}</td>
                     <td>{{station.escalator}}</td>
                     <td>{{station.callterminal}}</td>
-                    <td> <img src="{{station.id}}.png" alt="ligne image"></td>
+            
+
+                    <td> <img src="{{station.id}}/src/assets/images/ok.png" alt="ligne image"></td>
 
 
 
