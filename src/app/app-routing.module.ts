@@ -15,14 +15,14 @@ import { AdminUpdateComponent } from './admin/admin-update/admin-update.componen
 const routes: Routes = [
   { path: 'accueil', component: AcceuilComponent },
   { path: 'admin', component: AdminSignUpComponent },
-  { path: 'admin-update/:id-station', canActivate: [AuthGuard], component:AdminUpdateComponent},
+  { path: 'admin-update/:id-update', canActivate: [AuthGuard], component:AdminUpdateComponent},
 
   { path: 'app-create', canActivate: [AuthGuard], component: AdminCreateComponent },
   { path: 'app-admin-filter', component: AdminFilterComponent },
    { path: 'app-my-stations', component: AdminStationsComponent },
   { path: 'app-sign-in', component: AdminSignInComponent },
   { path: 'admin-crud', canActivate: [AuthGuard], component:AdminCrudComponent},
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 
 ];
 

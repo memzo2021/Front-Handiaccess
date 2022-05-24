@@ -10,15 +10,15 @@ import { StationService } from 'src/app/services/station.service';
   styleUrls: ['./admin-create.component.css'],
 })
 export class AdminCreateComponent implements OnInit {
-  public newStationForm!: FormGroup;
+   newStationForm!: FormGroup;
   constructor(private fb: FormBuilder,private stationService:StationService,private router:Router) { }
 
   ngOnInit(): void {
     this.newStationForm = this.fb.group({
       name: ['', Validators.required],
-      lift: [true, [Validators.required]],
-      escalator: [false, Validators.required],
-      callTerminal: [false, Validators.required],
+      lift: [ 0, Validators.required],
+      escalator: [0 , Validators.required],
+      callTerminal: [ 0, Validators.required],
     });
   }
   onSubmitForm() {
@@ -31,7 +31,7 @@ export class AdminCreateComponent implements OnInit {
     );
     console.log(newStation);
     this.stationService.createNewStation(newStation).subscribe(() => {
-      console.log("Le pays a été créé  avec succès!!!");
+      console.log("La station a été créée  avec succès!!!");
       this.router.navigateByUrl('/admin-crud');
     });
   }

@@ -7,27 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminFilterComponent implements OnInit {
   searchText: any;
-  stations = [{ id: 1, name: "Olympiades", lift: "True", escalator: "False", callterminal: "True " },
-    { id: 2, name: "Richelieu-Drouot", lift: "False", escalator: "False", callterminal: "True" },
-    { id: 3, name: "Mairie de Montreuil", lift: "True", escalator: "False", callterminal: "False" },
-  { id: 4, name: "Bibliothèques Francois Mitterand", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 5, name: "Cour Saint-Emillion", lift: "True", escalator: "False", callterminal: "True" },
-  { id: 6, name: "Bercy", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 7, name: "Gare de Lyon", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 8, name: "Chatêlet", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 9, name: "Pyramides", lift: "False", escalator: "True", callterminal: "True" },
-  { id: 10, name: "Madeleine", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 11, name: "Saint-Lazare", lift: "True", escalator: "True", callterminal: "True " },
-  { id: 12, name: "Poncardinet", lift: "False", escalator: "False", callterminal: "True" },
-  { id: 13, name: "Porte de Clichy", lift: "True", escalator: "False", callterminal: "True" },
-  { id: 14, name: "Saint-Ouen", lift: "True", escalator: "True", callterminal: "True" },
-  { id: 15, name: "jasmine", lift: "False", escalator: "False", callterminal: "True" },
-  { id: 16, name: "Franklin D Roosevlet", lift: "True", escalator: "False", callterminal: "True" },
-  { id: 17, name: "Saint-Ambroise", lift: "False", escalator: "False", callterminal: "True" },
-  { id: 18, name: "Voltaire", lift: "False", escalator: "False", callterminal: "True" },
-  { id: 19, name: "Mairie des Lillas", lift: "False", escalator: "False", callterminal: "False" },
-
-  { id: 20, name: "Havre-Caumartin", lift: "False", escalator: "False", callterminal: "True" }];
+  stations = [{ id: 1, name: "Olympiades", lift: "", escalator: "", callterminal: "", porte: "", line: "" },
+  { id: 2, name: "Bibliothèque F.M", lift: "", escalator: "", callterminal: " " },
+  { id: 3, name: "Cour Saint-Emillion", lift: "", escalator: "", callterminal: "" },
+  { id: 4, name: "Bibliothèques Francois Mitterand", lift: "", escalator: "", callterminal: "" },
+  { id: 5, name: "Bercy", lift: "", escalator: "", callterminal: "" },
+  { id: 6, name: "Chatêlet", lift: "", escalator: "", callterminal: "" },
+  { id: 7, name: "Pyramides", lift: "", escalator: "", callterminal: "" },
+  { id: 8, name: "Madeleine", lift: "", escalator: "", callterminal: "" },
+  { id: 9, name: "Saint-Lazare", lift: "", escalator: "", callterminal: " " },
+  { id: 10, name: "Poncardinet", lift: "", escalator: "", callterminal: "" },
+  { id: 11, name: "Porte de Clichy", lift: "", escalator: "", callterminal: "" },
+  { id: 12, name: "Saint-Ouen", lift: "", escalator: "", callterminal: "" },
+  { id: 13, name: "Mairie de Saint Ouen", lift: "", escalator: "", callterminal: "" },
+  { id: 14, name: "Chaussée d'An", lift: "", escalator: "", callterminal: "" },
+  ];
+  searchText2: any;
+  stations1 = [{ id: 15, name: 'Miromesnil', lift: "", escalator: "", callTerminal: "", porte: "", line: "" },
+  ];
 
   constructor() { }
 

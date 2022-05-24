@@ -14,7 +14,7 @@
             <a class="nav-link" routerLink="accueil" routerLinkActive="active">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/app-admin-filter" routerLinkActive="active">Filtrer</a>
+            <a class="nav-link" routerLink="/app-admin-filter" routerLinkActive="active">Recherche</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/app-create" routerLinkActive="active">New Station</a>
@@ -24,22 +24,22 @@
           </li>
 
         </ul>
-           
-      <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === false">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="admin" routerLinkActive="active">S'inscrire </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/app-sign-in" routerLinkActive="active">Se connecter</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === true">
-        <li class="nav-item">
-          <a class="nav-link" (click)="onClickLogout()">Log out</a>
 
-        </li>
-      </ul> 
-       </div>
+        <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === false">
+          <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="admin" routerLinkActive="active">S'inscrire </a>
+        </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/app-sign-in" routerLinkActive="active">Se connecter</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex ms-auto" *ngIf="isAuthenticated === true">
+          <li class="nav-item">
+            <a class="nav-link clickable" (click)="onClickLogout()">Log out</a>
+
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>

@@ -49,10 +49,8 @@ export class AdminSignInComponent implements OnInit {
         this.authService.messager.next(true);
 
       },
-      // method a appeler en cas d'error
-      error: (err: any) => {
-        // affichage message d'erreur coté page
-        this.signInError = true;
+       error: (err: any) => {
+         this.signInError = true;
         console.log(err);
         this.authService.newsletter.next('Erreur de connexion ...');
 

@@ -11,24 +11,40 @@
                     <th>Ascenseur</th>
                     <th>Escalator</th>
                     <th>Borne d'appel</th>
-                    <th>Ligne</th>
+                    <th>Porte palière</th>
+                    <th>N°de la ligne</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let station of stations | filter:searchText">
                     <td>{{station.id}}</td>
                     <td>{{station.name}}</td>
-                    <td>{{station.lift}}</td>
-                    <td>{{station.escalator}}</td>
-                    <td>{{station.callterminal}}</td>
-            
+                    <td>{{station.lift}}<img src="assets/images/ok.png" alt="borne=Oui"></td>
+                    <td>{{station.escalator}}<img src="assets/images/ok.png" alt="borne=Oui"></td>
+                    <td>{{station.callterminal}}<img src="assets/images/ok.png" alt="borne=Oui"></td>
+                    <td>{{station.porte}}<img src="assets/images/ok.png" alt="borne=Oui"></td>
+                    <td>{{station.line}}<img src="assets/images/14.png" alt="ligne image"></td>
+                    
 
-                    <td> <img src="{{station.id}}/src/assets/images/ok.png" alt="ligne image"></td>
+ 
+
+                </tr>
+                
+                <tr *ngFor="let station of stations1 | filter:searchText">
+                <td>{{station.id}}</td>
+                <td>{{station.name}}</td>
+                <td>{{station.lift}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
+                <td>{{station.escalator}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
+                <td>{{station.callTerminal}}<img src="assets/images/ok.png" alt="ligne image"></td>
+                <td>{{station.porte}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
+                <td>{{station.line}}<img src="assets/images/M7.png" alt="ligne image"></td>
+
 
 
 
 
                 </tr>
+                
             </tbody>
         </table>
     </div>
