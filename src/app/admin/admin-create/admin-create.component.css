@@ -1,0 +1,8 @@
+ input{
+ background-color: aliceblue;
+ margin-right: 20px;
+margin-block-start: auto;}
+
+form{
+    border: 3px blue dashed;
+}
