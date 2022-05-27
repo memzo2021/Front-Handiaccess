@@ -18,17 +18,13 @@ export class StationService {
 
     return this.http.post(
       `${this.urlApi}/stations`,
-      newStation,
-      { headers: { Authorization: `Bearer ${token}` } }
-
-    )
+      newStation)
   }
 
   getAllStations(): Observable<Station[]> {
     const token = localStorage.getItem("token");
 
     return this.http.get<Station[]>(`${this.urlApi}/stations/names`,//todo
-      { headers: { Authorization: `Bearer ${token}` } }
     )
   }
 
@@ -36,7 +32,6 @@ export class StationService {
     const token = localStorage.getItem("token");
 
     return this.http.get<Station>(`${this.urlApi}/stations/${stationId}`,//todo
-      { headers: { Authorization: `Bearer ${token}` } }
     )
   }
 
@@ -51,15 +46,14 @@ export class StationService {
     }
 
     return this.http.put<any>(`${this.urlApi}/stations/${station.id}`,
-      body,
-      { headers: { Authorization: `Bearer ${token}` } }
+      body
     )
   }
   // getStationUpdate(): Observable<Station[]>{
   //   const token = localStorage.getItem("token");
   //   return this.http.get<Station[]>(`${this.urlApi}/stations/`,
   //   { headers: { Authorization: `Bearer ${token}` } })
-  
+
   // }
 
 
@@ -70,11 +64,7 @@ export class StationService {
     const token = localStorage.getItem("token");
 
     return this.http.delete(`${this.urlApi}/stations/${stationId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }
+
     )
   }
 

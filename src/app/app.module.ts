@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+import { HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,7 @@ import { AdminSignInComponent } from './admin/admin-sign-in/admin-sign-in.compon
 import { AdminCreateComponent } from './admin/admin-create/admin-create.component';
 import { AdminCrudComponent } from './admin/admin-crud/admin-crud.component';
 import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
+import { AuthInterceptor } from './auth.interceptor';
  @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,9 @@ import { AdminUpdateComponent } from './admin/admin-update/admin-update.componen
     HttpClientModule,
     Ng2SearchPipeModule
   ],
-  providers: [],
+   providers: [
+    {provide :HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

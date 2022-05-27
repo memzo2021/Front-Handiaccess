@@ -16,7 +16,7 @@ export class AdminCreateComponent implements OnInit {
   ngOnInit(): void {
     this.newStationForm = this.fb.group({
       name: ['', Validators.required],
-      lift: ['', Validators.required],
+      lift: [false, Validators.required],
       escalator:[ false , Validators.required],
       callTerminal: [false , Validators.required],
     });
