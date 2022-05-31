@@ -42,7 +42,8 @@ export class StationService {
       name: station.name,
       lift: station.lift,
       escalator: station.escalator,
-      callTerminal: station.callTerminal
+      callTerminal: station.callTerminal,
+      
     }
 
     return this.http.put<any>(`${this.urlApi}/stations/${station.id}`,

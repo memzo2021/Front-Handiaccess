@@ -1,1 +1,40 @@
- <h1></h1>
+<h1>Mes stations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Lift</th>
+            <th>Escalator</th>
+            <th>Call terminal</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr *ngFor="let station of listStations">
+
+            <td>{{ station.name }}</td>
+
+            <td>
+                <img *ngIf="station.lift === true" src="assets/images/ok1.png" alt="ligne image">
+                <img *ngIf="station.lift === false" src="assets/images/nonConf.png" alt="ligne image">
+            </td>
+
+            <td><img *ngIf="station.escalator === true" src="assets/images/ok1.png" alt="ligne image">
+                <img *ngIf="station.escalator === false" src="assets/images/nonConf.png" alt="ligne image">
+
+            </td>
+
+            <td><img *ngIf="station.callTerminal === true" src="assets/images/ok1.png" alt="ligne image">
+                <img *ngIf="station.callTerminal === false" src="assets/images/nonConf.png" alt="ligne image">
+
+            </td>
+
+        </tr>
+
+
+    </tbody>

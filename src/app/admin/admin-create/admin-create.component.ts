@@ -27,8 +27,8 @@ export class AdminCreateComponent implements OnInit {
       this.newStationForm.value.name,
       this.newStationForm.value.lift,
       this.newStationForm.value.escalator,
-      this.newStationForm.value.callTerminal
-    );
+      this.newStationForm.value.callTerminal,
+     );
     console.log(newStation);
     this.stationService.createNewStation(newStation).subscribe(() => {
       console.log("La station a été créée  avec succès!!!");

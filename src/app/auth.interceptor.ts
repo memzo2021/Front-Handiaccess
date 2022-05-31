@@ -6,6 +6,7 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import jwtDecode from 'jwt-decode';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
@@ -19,6 +20,15 @@ export class AuthInterceptor implements HttpInterceptor {
     if (token !== '' && token !== null) {
        // je viens modifier la requete sortante pour 
       // y ajouter le token trouvé dans le localStorage
+
+      // vérif date expiration
+      const decodedToken: { sub: string, iat: number, exp: number } = jwtDecode(token);
+      const expirationDate = new Date(decodedToken.exp * 1000);
+      const currentDate = new Date();
+
+      if (expirationDate < currentDate) { 
+        return next.handle(request);
+      }
 
       const authReq = request.clone(
         {

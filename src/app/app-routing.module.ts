@@ -15,7 +15,8 @@ import { AdminUpdateComponent } from './admin/admin-update/admin-update.componen
 const routes: Routes = [
   { path: 'accueil', component: AcceuilComponent },
   { path: 'admin', component: AdminSignUpComponent },
-  { path: 'admin-update/:id-update', canActivate: [AuthGuard], component:AdminUpdateComponent},
+  { path: 'admin-update/:id-update', canActivate: [AuthGuard], component: AdminUpdateComponent },
+  {path:'admin-stations',component:AdminStationsComponent},
 
   { path: 'app-create', canActivate: [AuthGuard], component: AdminCreateComponent },
   { path: 'app-admin-filter', component: AdminFilterComponent },
