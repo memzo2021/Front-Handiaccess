@@ -16,34 +16,47 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let station of stations | filter:searchText">
+                <tr *ngFor="let station of listStations | filter:searchText">
                     <td>{{station.id}}</td>
                     <td>{{station.name}}</td>
-                    <td>{{station.lift}}<img src="assets/images/ok1.png" alt="borne=Oui"></td>
-                    <td>{{station.escalator}}<img src="assets/images/ok1.png" alt="borne=Oui"></td>
-                    <td>{{station.callterminal}}<img src="assets/images/ok1.png" alt="borne=Oui"></td>
+
+                    <td><img *ngIf="station.lift === true" src="assets/images/ok1.png" alt="ligne image">
+                        <img *ngIf="station.lift === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    </td>
+                    <td><img *ngIf="station.escalator === true" src="assets/images/ok1.png" alt="ligne image">
+                        <img *ngIf="station.escalator === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    </td>
+                    <td><img *ngIf="station.callTerminal === true" src="assets/images/ok1.png" alt="ligne image">
+                        <img *ngIf="station.callTerminal === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    </td>
                     <td>{{station.porte}}<img src="assets/images/ok1.png" alt="borne=Oui"></td>
                     <td>{{station.line}}<img src="assets/images/14.png" alt="ligne image"></td>
                     
 
  
 
-                </tr>
+                <!-- </tr>
                 
-                <tr *ngFor="let station of stations1 | filter:searchText">
+                <tr *ngFor="let station of listStations | filter:searchText">
                 <td>{{station.id}}</td>
                 <td>{{station.name}}</td>
-                <td>{{station.lift}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
-                <td>{{station.escalator}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
-                <td>{{station.callTerminal}}<img src="assets/images/ok1.png" alt="ligne image"></td>
-                <td>{{station.porte}}<img src="assets/images/nonConf.png" alt="ligne image"></td>
+                <td><img *ngIf="station.lift === true" src="assets/images/ok1.png" alt="ligne image">
+                    <img *ngIf="station.lift === false" src="assets/images/nonConf1.png" alt="ligne image">
+                </td>
+                <td><img *ngIf="station.escalator === true" src="assets/images/ok1.png" alt="ligne image">
+                    <img *ngIf="station.escalator === false" src="assets/images/nonConf1.png" alt="ligne image">
+                </td>
+                <td><img *ngIf="station.callTerminal === true" src="assets/images/ok1.png" alt="ligne image">
+                    <img *ngIf="station.callTerminal === false" src="assets/images/nonConf1.png" alt="ligne image">
+                </td>
+                <td>{{station.porte}}<img src="assets/images/nonConf1.png" alt="ligne image"></td>
                 <td>{{station.line}}<img src="assets/images/M7.png" alt="ligne image"></td>
 
 
 
 
 
-                </tr>
+                </tr> -->
                 
             </tbody>
         </table>
