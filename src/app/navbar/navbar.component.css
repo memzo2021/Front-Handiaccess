@@ -9,3 +9,9 @@ img{
 i{
     background-color: black;
 }
+
+button{
+        border: 3px blue dashed;
+        background-color:rgba(192, 255, 209, 0.311);
+
+}
