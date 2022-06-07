@@ -10,13 +10,15 @@ import { AdminCreateComponent } from './admin/admin-create/admin-create.componen
 import { AuthGuard } from './guards/auth.guard';
 import { AdminCrudComponent } from './admin/admin-crud/admin-crud.component';
 import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
+import { LinesComponent } from './pages/lines/lines.component';
 
 
 const routes: Routes = [
   { path: 'accueil', component: AcceuilComponent },
   { path: 'admin', component: AdminSignUpComponent },
   { path: 'admin-update/:id-update', canActivate: [AuthGuard], component: AdminUpdateComponent },
-  {path:'admin-stations',component:AdminStationsComponent},
+  { path: 'admin-stations', component: AdminStationsComponent },
+  { path: 'app-lines', canActivate: [AuthGuard],component:LinesComponent},
 
   { path: 'app-create', canActivate: [AuthGuard], component: AdminCreateComponent },
   { path: 'app-admin-filter', component: AdminFilterComponent },

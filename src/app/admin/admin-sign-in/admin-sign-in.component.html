@@ -1,18 +1,22 @@
-<h1>Sign in</h1>
+<h1>Page de connexion</h1>
 <form class="mt-5 col-md-6 m-auto" #signInForm="ngForm" (ngSubmit)="onSubmitSignIn(signInForm)">
     <div class="mb-3">
-        <label for="username" class="form-label">Username (email address)</label>
+        <label for="username" class="form-label">Adresse mail </label>
         <div class="input-group">
             <span class="input-group-text" id="userHelp">@</span>
             <input type="text" class="form-control" id="username" name="username" ngModel required>
         </div>
     </div>
     <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" id="password" class="form-control" name="password" ngModel required>
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" id="password" class="form-control" name="password" ngModel required [minlength]="8">
     </div>
     <div class="d-grid col-12 col-md-2 ms-auto">
-        <button type="submit" class="btn btn-primary text-nowrap" [disabled]="signInForm.invalid">Sign in</button>
+        <button type="submit" class="btn btn-primary text-nowrap" [disabled]="signInForm.invalid">Se connecter</button>
+    </div>
+    <div *ngIf="signInForm.controls['password'].touched && signInForm.controls['password'].getError('required')"
+        class="form-text alert-danger">
+        Le mot de passe est obligatoire
     </div>
 </form>
 <div class="alert-danger" *ngIf="signInError">

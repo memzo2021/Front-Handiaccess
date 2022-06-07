@@ -13,7 +13,7 @@ export class AdminCrudComponent implements OnInit {
   constructor(private stationService: StationService) { }
 
   ngOnInit(): void {
-    this.stationService.getAllStations().subscribe((resp) => {
+    this.stationService.getAllAdminStations().subscribe((resp) => {
       console.log(resp);
       this.listStations = resp;
     })
@@ -24,10 +24,7 @@ export class AdminCrudComponent implements OnInit {
       this.stationService.deleteStation(stationId).subscribe({
         next: (resp) => {
           console.log(resp);
-          // Todo 
-          // Rechercher dans le tableau this.listStation l'objet station avec l'_id == stationId
-          // et le supprimer pour que notre liste de station n'affiche plus la station supprimée
-          //Pour ne pas à recharger la page pour voir la station supprimée
+           
           this.listStations = this.listStations.filter(station =>station.id !== stationId);
         },
         error: (err) => { console.error(err) }

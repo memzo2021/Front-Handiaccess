@@ -21,6 +21,7 @@ import { AdminCreateComponent } from './admin/admin-create/admin-create.componen
 import { AdminCrudComponent } from './admin/admin-crud/admin-crud.component';
 import { AdminUpdateComponent } from './admin/admin-update/admin-update.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { LinesComponent } from './pages/lines/lines.component';
  @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { AuthInterceptor } from './auth.interceptor';
     AdminSignInComponent,
     AdminCrudComponent,
     AdminUpdateComponent,
+    LinesComponent,
    ],
   imports: [
     BrowserModule,

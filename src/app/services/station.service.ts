@@ -22,11 +22,17 @@ export class StationService {
   }
 
   getAllStations(): Observable<Station[]> {
-    const token = localStorage.getItem("token");
-
-    return this.http.get<Station[]>(`${this.urlApi}/stations/names`,//todo
+    return this.http.get<Station[]>(`${this.urlApi}/stations`,//todo
     )
   }
+
+  getAllAdminStations(): Observable<Station[]> {
+    const token = localStorage.getItem("token");
+
+    return this.http.get<Station[]>(`${this.urlApi}/stations/admin-view`,//todo
+    )
+  }
+
 
   getStationById(stationId: string): Observable<Station> {
     const token = localStorage.getItem("token");
@@ -43,7 +49,8 @@ export class StationService {
       lift: station.lift,
       escalator: station.escalator,
       callTerminal: station.callTerminal,
-      
+      lineId: station.lineId
+
     }
 
     return this.http.put<any>(`${this.urlApi}/stations/${station.id}`,

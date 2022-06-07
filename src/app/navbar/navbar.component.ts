@@ -15,8 +15,7 @@ export class NavbarComponent implements OnInit {
 
 
     this.authService.messager.subscribe((message: boolean) => {
-      console.log("Un utilisateur s'est connecté ou déconnecté ! ");
-      console.log(message);
+       console.log(message);
       this.isAuthenticated = message;
     })
     this.authService.newsletter.subscribe((textNewsletter: string) => {
@@ -29,10 +28,6 @@ export class NavbarComponent implements OnInit {
     localStorage.removeItem('token');
     this.isAuthenticated = false;
     this.router.navigateByUrl('/app-sign-in');
-    /**
-     *  - Supprimer le token dans le localStorage
-        - Modifier la valeur de la propriété isAuthenticated à false
-        - Rediriger l'utilisateur vers la page de connexion ("sign-in")
-     */
+    
   }
 }

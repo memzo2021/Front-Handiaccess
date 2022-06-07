@@ -8,7 +8,9 @@
             <th>Lift</th>
             <th>Escalator</th>
             <th>Call terminal</th>
-            <th></th>
+            
+
+            
             <th></th>
 
         </tr>
@@ -34,15 +36,32 @@
 
 
             </td>
+            <!-- <td> <img *ngIf="station.lineLandingDoor === true " src="assets/images/ok1.png" alt="landing">
+                <img *ngIf="station.lineLandingDoor ===  false " src="assets/images/nonConf1.png" alt="landing">
+            </td> -->
+            
+            <!-- <td> <img *ngIf="station.lineNumber === 11 " src="assets/images/M11.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 14 " src="assets/images/M14.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 1 " src="assets/images/M1.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 3 " src="assets/images/M3.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 5 " src="assets/images/M5.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 2 " src="assets/images/M2.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 13 " src="assets/images/M13.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 9 " src="assets/images/M9.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 4 " src="assets/images/M4.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 6 " src="assets/images/M6.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 10 " src="assets/images/M10.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 7 " src="assets/images/M7.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 12 " src="assets/images/M12.png" alt="lineNumber">
+                <img *ngIf="station.lineNumber === 8 " src="assets/images/M8.png" alt="lineNumber">
+
+            
+            </td> -->
             <!-- ------------------------------- -->
             <td>
                 <button class="btn btn-warning" routerLink="/admin-update/{{station.id}}">Update</button>
             </td>
-             <td>
-                <button class="btn btn-danger"
-                (click)="onClickDeleteStation(station.id)">Delete
-                    </button>
-            </td>
+              
         </tr>
     </tbody>
 </table>

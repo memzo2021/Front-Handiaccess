@@ -2,34 +2,38 @@
 <form class="mt-5 col-md-6 m-auto" [formGroup]="newStationForm" (ngSubmit)="onSubmitForm()">
     <div class="mb-3">
         <label for="name-station" class="form-label">Station name</label>
-        <div class="input-group">
+        <input formControlName="name" type="text" class="form-control" id="name" ngModel required />
+    </div>
+        <div class="mb-3">
+            <label for="lineId" class="form-label">Link to line</label>
+            <input formControlName="lineId" type="text" class="form-control" id="lineId"
+                aria-describedby="lineIdHelp" ngModel required />
 
-            <input formControlName="name" type="text" class="form-control" id="name"
-                aria-describedby="nameHelp" />
         </div>
 
-    </div>
+    
 
     <div class="mb-3 form-check">
         <label for="lift" class="form-check-label">Lift</label>
-        <input formControlName="lift" type="checkbox" class="form-check-input" id="lift"
-            aria-describedby="liftHelp" />
-         
+        <input formControlName="lift" type="checkbox" class="form-check-input" id="lift" aria-describedby="liftHelp" />
+
+    </div>
+ 
+    <div class="mb-3 form-check">
+        <label for="escalator" class="form-check-label">Escalator</label>
+        <input formControlName="escalator" type="checkbox" class="form-check-input" id="escalator"
+            aria-describedby="escalatorHelp" />
+
     </div>
 
-<div class="mb-3 form-check">
-    <label for="escalator" class="form-check-label">Escalator</label>
-    <input formControlName="escalator" type="checkbox" class="form-check-input" id="escalator"
-        aria-describedby="escalatorHelp" />
 
-</div>
 
-     
+
     <div class="mb-3 form-check">
         <label for="callTerminal" class="form-check-label">Call terminal</label>
         <input formControlName="callTerminal" type="checkbox" class="form-check-input" id="callTerminal"
             aria-describedby="callTerminalHelp" />
-        
+
         <div class="d-grid d-md-flex justify-content-md-end">
             <button [disabled]="newStationForm.invalid" type="submit" class="btn btn-primary btn-lg">
                 Create

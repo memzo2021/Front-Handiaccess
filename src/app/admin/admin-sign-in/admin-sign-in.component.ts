@@ -13,23 +13,9 @@ export class AdminSignInComponent implements OnInit {
   constructor(private authService: AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
+    
   }
-  /**
-   * SI VOUS ÊTES PERDU VOICI UN PLAN D'ACTION : 
-   * 
-   //  - Création du composant page-sign-in : ng g c sign-in
-   //  - MàJ Routing pour afficher notre page sign in (http://locahost:4200/sign-in)
-   //  - MàJ de notre html de nav-bar pour pouvoir accéder à la page sign-in au clic
-   //  - Ajout du code du formulaire HTML en static 
-   //  - Transformation du formulaire statique en template driven  
-   //  - Affichage du contenu des champs du formulaire dans notre console !
-   //  - Création d'une nouvelle méthode dans notre service (pour POST vers /login)
-   //  - Appel de cette méthode dans notre composant page-sign-in pour envoyer nos info de connexion vers l'API
-   //  - S'inspirer de ce qu'on a fait sur le sign-up (pour la partie TS)
-   // TODO - Affichage du token reçu si la connexion est une réussite
-   //  YOUPI !!! 😄
-
-   */
+   
   onSubmitSignIn(form: NgForm) {
     console.log(form.value);
     const username = form.value.username;
@@ -57,13 +43,7 @@ export class AdminSignInComponent implements OnInit {
       }
     })
 
-    /**
-     * Observable.subscribe({
-     *  next: () => { *instructions* },
-     *  error: () => { *instructions* }
-     * })
-     */
-
+     
   }
 
 }
