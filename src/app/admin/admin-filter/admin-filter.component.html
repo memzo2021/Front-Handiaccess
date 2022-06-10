@@ -1,12 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="Search-hero">
-            <input type="text" name="search" [(ngModel)]="searchText" placeholder="FILTRER">
+            <input type="text" name="search" [(ngModel)]="searchText" placeholder="Filtrer par nom">
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
-                     
                     <th>Nom de la station</th>
                     <th>Ascenseur</th>
                     <th>Escalator</th>
@@ -17,47 +16,20 @@
             </thead>
             <tbody>
                 <tr *ngFor="let station of listStations | filter:searchText">
-                    
                     <td>{{station.name}}</td>
 
-                    <td><img *ngIf="station.lift === true" src="assets/images/ok1.png" alt="ligne image">
-                        <img *ngIf="station.lift === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    <td><img src="assets/images/{{station.lift}}.png" alt="ligne image">
                     </td>
-                    <td><img *ngIf="station.escalator === true" src="assets/images/ok1.png" alt="ligne image">
-                        <img *ngIf="station.escalator === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    <td><img src="assets/images/{{station.escalator}}.png" alt="ligne image">
                     </td>
-                    <td><img *ngIf="station.callTerminal === true" src="assets/images/ok1.png" alt="ligne image">
-                        <img *ngIf="station.callTerminal === false" src="assets/images/nonConf1.png" alt="ligne image">
+                    <td><img src="assets/images/{{station.callTerminal}}.png" alt="ligne image">
                     </td>
-                    <td> <img *ngIf="station.lineLandingDoor === true "  src="assets/images/ok1.png" alt="landingDoor">
-                         <img *ngIf="station.lineLandingDoor ===  false " src="assets/images/nonConf1.png" alt="landingDoor">
+                    <td><img src="assets/images/{{station.lineLandingDoor}}.png" alt="ligne image">
                     </td>
 
-                    <td> <img *ngIf="station.lineNumber === 11 " src="assets/images/M11.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 14 " src="assets/images/M14.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 1 " src="assets/images/M1.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 3 " src="assets/images/M3.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 5 " src="assets/images/M5.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 2 " src="assets/images/M2.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 13 " src="assets/images/M13.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 9 " src="assets/images/M9.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 4 " src="assets/images/M4.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 6 " src="assets/images/M6.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 10 " src="assets/images/M10.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 7 " src="assets/images/M7.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 12 " src="assets/images/M12.png" alt="lineNumber">
-                    <img *ngIf="station.lineNumber === 8 " src="assets/images/M8.png" alt="lineNumber">
-
-                    </td>
- 
-                    
-
-               
-
-                
+                    <td><img src="assets/images/M{{station.lineNumber}}.png" alt="lineNumber"></td>
 
 
-                
             </tbody>
         </table>
     </div>

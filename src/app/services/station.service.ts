@@ -22,14 +22,14 @@ export class StationService {
   }
 
   getAllStations(): Observable<Station[]> {
-    return this.http.get<Station[]>(`${this.urlApi}/stations`,//todo
+    return this.http.get<Station[]>(`${this.urlApi}/stations`,
     )
   }
 
   getAllAdminStations(): Observable<Station[]> {
     const token = localStorage.getItem("token");
 
-    return this.http.get<Station[]>(`${this.urlApi}/stations/admin-view`,//todo
+    return this.http.get<Station[]>(`${this.urlApi}/stations/admin-view`,
     )
   }
 
@@ -37,7 +37,7 @@ export class StationService {
   getStationById(stationId: string): Observable<Station> {
     const token = localStorage.getItem("token");
 
-    return this.http.get<Station>(`${this.urlApi}/stations/${stationId}`,//todo
+    return this.http.get<Station>(`${this.urlApi}/stations/${stationId}`,
     )
   }
 
@@ -57,13 +57,7 @@ export class StationService {
       body
     )
   }
-  // getStationUpdate(): Observable<Station[]>{
-  //   const token = localStorage.getItem("token");
-  //   return this.http.get<Station[]>(`${this.urlApi}/stations/`,
-  //   { headers: { Authorization: `Bearer ${token}` } })
-
-  // }
-
+   
 
 
 
