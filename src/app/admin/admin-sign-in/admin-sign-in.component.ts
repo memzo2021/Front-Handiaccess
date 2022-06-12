@@ -24,14 +24,11 @@ export class AdminSignInComponent implements OnInit {
     const requeteObservable = this.authService.logUser(username, password);
 
     requeteObservable.subscribe({
-      // method a appeler en cas de succès 
-      next: (resp: any) => {
+       next: (resp: any) => {
         console.log(resp.token);
 
         this.router.navigateByUrl('/admin-crud');
-        // TODO stockage de mon token 
-        // Localstorage
-        localStorage.setItem("token", resp.token);
+         localStorage.setItem("token", resp.token);
         this.authService.messager.next(true);
 
       },

@@ -7,7 +7,9 @@ export class Station {
     lineId: number;
 
 
-    constructor(paramName: string, paramLift: boolean, paramEscalator: boolean, paramCallTerminal: boolean, paramLineId: number) {
+    constructor(paramName: string, paramLift: boolean,
+        paramEscalator: boolean,
+        paramCallTerminal: boolean, paramLineId: number) {
         this.name = paramName;
         this.lift = paramLift;
         this.escalator = paramEscalator;
