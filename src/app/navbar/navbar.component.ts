@@ -12,8 +12,13 @@ export class NavbarComponent implements OnInit {
   public isAuthenticated = false;
   constructor(private authService: AuthenticationService, private router: Router) { }
   ngOnInit(): void {
-
-
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.isAuthenticated = true;
+      
+    }
+    
+  
     this.authService.messager.subscribe((message: boolean) => {
        console.log(message);
       this.isAuthenticated = message;

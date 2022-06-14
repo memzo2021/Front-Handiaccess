@@ -19,7 +19,7 @@ export class AdminCreateComponent implements OnInit {
       lift: [false, Validators.required],
       escalator: [false, Validators.required],
       callTerminal: [false, Validators.required],
-      lineId: [false, Validators.required]
+      lineId: [false, [Validators.required, Validators.min(1),Validators.max(14)]]
     });
   }
   onSubmitForm() {

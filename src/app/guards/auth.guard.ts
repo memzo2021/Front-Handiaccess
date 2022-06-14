@@ -23,6 +23,7 @@ export class AuthGuard implements CanActivate {
       monRole = decodedToken.roles;
       const expirationDate = new Date(decodedToken.exp * 1000);
       const currentDate = new Date();
+      
       console.log(expirationDate);
       console.log(currentDate);
 

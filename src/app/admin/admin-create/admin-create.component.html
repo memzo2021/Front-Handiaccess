@@ -3,11 +3,30 @@
     <div class="mb-3 form">
         <label for="name-station" class="form-label">Station name</label>
         <input formControlName="name" type="text" class="form-control" id="name" ngModel required />
+
+        <div *ngIf="newStationForm.controls['name'].touched && newStationForm.controls['name'].getError('required')"
+            class="form text alert-danger">
+            La saisie du nom est obligatoire 
+        
+        </div>
+
     </div>
         <div class="mb-3">
             <label for="lineId" class="form-label">Link to line</label>
             <input formControlName="lineId" type="number" class="form-control" id="lineId"
                 value="1" min="1" max="14" ngModel required  />
+                <div
+                *ngIf="newStationForm.controls['lineId'].dirty && newStationForm.controls['lineId'].getError('min')"
+                class="form text alert-danger"
+                >
+                Le numero de la ligne ne peut pas être inferieur à 1
+
+                </div>
+            <div *ngIf="newStationForm.controls['lineId'].dirty && newStationForm.controls['lineId'].getError('max')"
+                class="form text alert-danger">
+                Le numero de la ligne doit être  compris entre  1 et 14
+            
+            </div>
 
         </div>
 
